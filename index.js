@@ -3,6 +3,8 @@
 const express  = require('express');
 const bodyParser  = require('body-parser');
 const app = express();
+const pino = require('pino-http')()
+app.use(pino)
 app.use(express.urlencoded({ extended: true }))
 
 app.use(bodyParser.json());

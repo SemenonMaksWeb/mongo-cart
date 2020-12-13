@@ -16,8 +16,10 @@ const сart = new Schema({
         enum: ["Существо", "Заклинания"],
     },
     class_id:{
-        type: Schema.ObjectId,
-        ref: "class_heroes",
+        type: Number,
+    },
+    class_data:{
+
     },
     img:{
         type:String,

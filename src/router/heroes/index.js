@@ -21,12 +21,12 @@ router.get("/heroes/:id", (req, res) => {
                 res.statusCode = 404;
                 return res.send({error: 'Карта не найдена'});
             } else {
-                let class_heroes = await perk.findById(heroes_data.class_id);
                 let perk_heroes = await perk.findById(heroes_data.perk_id);
+                let class_heroes_data = await class_heroes.findById(heroes_data.class_id);
                 return res.send({
                     status: 'OK', heroes: {
                         info: heroes_data,
-                        class: class_heroes,
+                        class: class_heroes_data,
                         perk: perk_heroes,
                     }
                 });

@@ -4,7 +4,7 @@ let uniqueValidator = require('mongoose-unique-validator');
 let auto_increment = require("../plagins/auto_increment");
 const Schema = mongoose.Schema;
 const class_heroes = new Schema({
-    _id: String,
+    _id: Number,
     name:{
         type:String,
         lowercase: true,
